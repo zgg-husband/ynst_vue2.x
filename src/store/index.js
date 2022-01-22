@@ -4,7 +4,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    userInfo:{}
+    userInfo:{
+      account:"123"
+    }
   },
   mutations: {
     setUserInfo(state,data){

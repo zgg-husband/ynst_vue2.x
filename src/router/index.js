@@ -9,7 +9,7 @@ const routes = [
   {
     path: '/',
     name: 'Index',
-    redirect:"/login"
+    redirect:"/home"
   },
   {
     path:"/home",
@@ -40,6 +40,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  console.log(to,from)
   let userInfo = store.state.userInfo
   if(to.path==="/login") return next();//要去login，直接去
   //没有用户信息，并且要去其他页面，重定向到/login

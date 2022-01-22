@@ -65,7 +65,7 @@
              if(response.status===200&&response.data.code===200){
                 // console.log(this.$store)
                   this.$store.commit("setUserInfo",response.data.data)
-                  this.$router.push("/list")
+                  this.$router.push("/home")
              }
            })
           } else {
